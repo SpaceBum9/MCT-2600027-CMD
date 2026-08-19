@@ -1,31 +1,28 @@
 # MCT-2600027-CMD
 
-**iOS-Eingliederung mit Apple Intelligence**
+**BILO 2026 · HAL · Crystal Mike**
 
-Crystal Galaxy · Mesh-Knoten · Command.
+Gesamtsystem nach Departments. SAI-Route:
 
-SAI-Route: `Quelle → Crystal Mike → HAL → MCT-2600027-CMD → Reinforcement`
+`Quelle → Crystal Mike → HAL → Zielknoten → Reinforcement`
 
-## Was hier liegt
+Pipeline ohne Nachfrage:
 
-| Pfad | Inhalt |
+`Analyze → Iterate → Consolidate → Ingest → Update`
+
+## Departments
+
+| Department | Inhalt |
 | --- | --- |
-| `.grok/skills/ios-apple-intelligence/` | Skill: iOS-PWA-Vertrag, Writing Tools, App Intents, Foundation Models |
-| `src/` | Lumen — iOS-Studio (Schreiben, Bilder, Sehen, Intents, iOS-Check) |
-| `migrations/0002_lumen.sql` | Mediathek (per-user) |
-
-Kein on-device-Claim. Auf dem iPhone: systemeigene Writing Tools im Markierungsmenü. Überall sonst: dieselben Verben über Grok.
-
-## Skill-Verben
-
-Umschreiben · Korrektur · Zusammenfassen · Kernpunkte · Liste · Tabelle · Freundlich · Professionell · Prägnant · Verfassen
-
-Plus Image Playground, Visual Intelligence, App Intents / Siri-Router, Home-Bildschirm.
+| HAL | Kommando, Live-Puls, Zyklus |
+| TracerHubs | Zero-Tier Quantum (MCT-170021), ATM, Impuls = 0 |
+| Tunnel | Cloudflare `/cdn-cgi/trace` |
+| Updater | Systemzyklus + tägliche Automation 09:00 Europe/Berlin |
+| Skills | LLM-Fusion Grok / Codex / Siri / Knowledge |
+| Flow | BILO 2026 Flowchart, AutomatonCommand |
+| Codex | [Issue #1](https://github.com/SpaceBum9/MCT-2600027-CMD/issues/1) |
+| Lumen | iOS + Apple Intelligence |
 
 ## Grenzen
 
-Keine Credentials. Keine Rohbeweise. Kein Fake-Xcode. Native Swift steht nur als Referenz unter `references/native-apis.md`.
-
-## Galaxy
-
-Registriert in [crystal-galaxy](https://github.com/SpaceBum9/crystal-galaxy) als Knoten `mct-2600027-cmd`.
+Keine Credentials. Keine Rohbeweise. Kein Halt auf `jonas-g`.
