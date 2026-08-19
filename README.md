@@ -4,43 +4,34 @@ Open source. MIT.
 
 **BILO 2026 · HAL · Crystal Mike**
 
-Agent-Orchestrator plus Departments. SAI-Route:
+Agent-Orchestrator mit verschränkten Zyklen.
 
 `Quelle → Crystal Mike → HAL → Zielknoten → Reinforcement`
 
-Pipeline:
+## Automationen
 
-`Analyze → Iterate → Consolidate → Ingest → Update`
+In der App: Entangle 45s (solange CMD offen), Oracle-Refresh, iCloud-Inbox.
+Grok: System-Updater 09:00, Oracle-Cycle 21:00 Europe/Berlin.
 
-## Agents
+Paare, `b = −tanh(a)`:
 
-| Rolle | Tut |
-| --- | --- |
-| Teacher | stellt Aufgaben |
-| Learner | übt, Gewicht steigt |
-| Challenger | injiziert Drift |
-| Referee | Schema + ECHOGLAS |
-| Scout | zieht Departments zusammen |
-| Keeper | kein Halt auf `jonas-g` |
+- Teacher ⇄ Learner
+- Challenger ⇄ Referee
+- Scout ⇄ Keeper
+- Oracle ⇄ iCloud
 
-Trainingsspiele: **Korridor**, **SAI-Route**, **Department**, **Zero Momentum**, **Kreuzkopplung**.
+DAG: scout-keep → oracle-cloud → teach-learn → challenge-ref
 
-Nach jeder Session zieht Scout alle Departments auf denselben Mittelwert zu.
+## Oracle
 
-## Departments
+SoundCloud (oEmbed), Bandcamp, Suno — **nur Metadaten**, kein Audio-Rip.
 
-HAL · Agents · TracerHubs · Tunnel · Updater · Skills · Flow · Codex · Lumen
+## iCloud
 
-## Architektur
-
-Zero-Tier Quantum aus [MCT-170021](https://github.com/SpaceBum9/mct-170021-zero-tier-quantum-skills-tools-mcp-connectors): Overlay `mct170021-zero-tier`, ATM 53 Byte, Impuls `(0,0,0)`, Euclidean Sequencer, MCP-Fusion.
-
-Transport: Cloudflare `/cdn-cgi/trace` + ZeroTier PQC / ML-KEM-1024.
+Kein Sign in with Apple. Share Sheet, Datei, iOS-Shortcut → Inbox (Konto).
 
 ## Grenzen
 
-Keine Credentials. Keine Rohbeweise. Kein Halt auf privaten Knoten.
-
-## Lizenz
+Keine Credentials. Keine Rohbeweise. Kein Halt auf `jonas-g`. Kein Audio-Download.
 
 [MIT](./LICENSE)
