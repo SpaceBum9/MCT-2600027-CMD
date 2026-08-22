@@ -5,6 +5,11 @@ import {
   type DepartmentId,
   type DepartmentStatus,
 } from "./catalog";
+import {
+  inspectGrokAdapter,
+  type GrokAdapterConfig,
+  type GrokAdapterSnapshot,
+} from "../intelligence/grok-adapter";
 
 export type DepartmentSnapshot = {
   id: DepartmentId;
@@ -20,6 +25,9 @@ export type AnalyzeSnapshot = {
   departmentCount: number;
   statusCounts: Record<DepartmentStatus, number>;
   departments: DepartmentSnapshot[];
+  integrations: {
+    grok: GrokAdapterSnapshot;
+  };
 };
 
 export function getDepartment(id: DepartmentId): DepartmentSnapshot {
@@ -37,7 +45,7 @@ export function getDepartment(id: DepartmentId): DepartmentSnapshot {
   };
 }
 
-export function analyzeDepartments(): AnalyzeSnapshot {
+export function analyzeDepartments(grokConfig: GrokAdapterConfig = {}): AnalyzeSnapshot {
   const statusCounts: Record<DepartmentStatus, number> = {
     registered: 0,
     partial: 0,
@@ -56,5 +64,8 @@ export function analyzeDepartments(): AnalyzeSnapshot {
     departmentCount: departments.length,
     statusCounts,
     departments,
+    integrations: {
+      grok: inspectGrokAdapter(grokConfig),
+    },
   };
 }
