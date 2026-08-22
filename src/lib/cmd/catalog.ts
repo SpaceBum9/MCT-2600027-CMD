@@ -15,17 +15,26 @@ export const PIPELINE = [
 
 export type PipelineId = (typeof PIPELINE)[number]["id"];
 
+export type DepartmentStatus = "registered" | "partial" | "ready" | "blocked";
+
 export const DEPARTMENTS = [
-  { id: "hal", title: "HAL", path: "/", summary: "Kommando. SAI-Trace. Live-Puls.", group: "kern" },
-  { id: "tracer", title: "TracerHubs", path: "/tracer", summary: "Zero-Tier Quantum Architektur. ATM, Impuls = 0.", group: "netz" },
-  { id: "tunnel", title: "Tunnel", path: "/tunnel", summary: "Cloudflare. colo, loc, warp.", group: "netz" },
-  { id: "updater", title: "Updater", path: "/update", summary: "MCT-2600027 Systemzyklus.", group: "ops" },
-  { id: "skills", title: "Skills", path: "/skills", summary: "LLM-Fusion: Grok, Codex, Siri, Knowledge.", group: "ops" },
-  { id: "flow", title: "Flow", path: "/flow", summary: "BILO 2026 Flowchart. Control Plane.", group: "kern" },
-  { id: "codex", title: "Codex", path: "/codex", summary: "GitHub → Issue → Agent → PR.", group: "ops" },
-  { id: "agents", title: "Agents", path: "/agents", summary: "Orchestrator: Teacher, Learner, Challenger.", group: "kern" },
-  { id: "lumen", title: "Lumen", path: "/write", summary: "iOS + Apple Intelligence.", group: "produkt" },
-] as const;
+  { id: "hal", title: "HAL", path: "/", status: "registered", summary: "Kommando. SAI-Trace. Live-Puls.", group: "kern" },
+  { id: "tracer", title: "TracerHubs", path: "/tracer", status: "registered", summary: "Zero-Tier Quantum Architektur. ATM, Impuls = 0.", group: "netz" },
+  { id: "tunnel", title: "Tunnel", path: "/tunnel", status: "registered", summary: "Cloudflare. colo, loc, warp.", group: "netz" },
+  { id: "updater", title: "Updater", path: "/update", status: "registered", summary: "MCT-2600027 Systemzyklus.", group: "ops" },
+  { id: "skills", title: "Skills", path: "/skills", status: "registered", summary: "LLM-Fusion: Grok, Codex, Siri, Knowledge.", group: "ops" },
+  { id: "flow", title: "Flow", path: "/flow", status: "registered", summary: "BILO 2026 Flowchart. Control Plane.", group: "kern" },
+  { id: "codex", title: "Codex", path: "/codex", status: "registered", summary: "GitHub → Issue → Agent → PR.", group: "ops" },
+  { id: "agents", title: "Agents", path: "/agents", status: "registered", summary: "Orchestrator: Teacher, Learner, Challenger.", group: "kern" },
+  { id: "lumen", title: "Lumen", path: "/write", status: "registered", summary: "iOS + Apple Intelligence.", group: "produkt" },
+] as const satisfies readonly {
+  id: string;
+  title: string;
+  path: string;
+  status: DepartmentStatus;
+  summary: string;
+  group: string;
+}[];
 
 export type DepartmentId = (typeof DEPARTMENTS)[number]["id"];
 
